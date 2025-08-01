@@ -1,0 +1,752 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 对应的CSS样式 */
+.header-nav {
+  position: relative;
+  z-index: 1000;
+  height: 100px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  transition: opacity 0.3s;
+}
+
+.logo-link:hover {
+  opacity: 0.9;
+}
+
+
+
+/* 添加以下CSS样式 */
+.contact-info {
+  margin-left: auto; /* 推到右侧 */
+  padding: 8px 15px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.contact-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.tel-line a {
+  color: #ffd700;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.tel-line a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.contact-info svg {
+  width: 18px;
+  height: 18px;
+  stroke: #ffd700;
+}
+
+/* 悬停动效 */
+.contact-info:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateX(-5px);
+}
+
+
+
+
+
+.Navigator {
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.Navigator .Nav {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.Navigator .Nav ul {
+    display: flex;
+    height: 64px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* 核心布局样式 */
+.Navigator .Nav ul li {
+    flex: 1; /* 等分宽度 */
+    position: relative;
+    border-right: 1px solid #e0e0e0; /* 右侧边框 */
+    margin-right: -1px; /* 边框重叠处理 */
+}
+
+/* 最后一个项去除右边框 */
+.Navigator .Nav ul li:last-child {
+    border-right: none;
+}
+
+.Navigator .Nav ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #555;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    background: rgba(250,250,250,0.9);
+    border-left: 1px solid #e0e0e0; /* 左侧边框 */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 首项去除左边框 */
+.Navigator .Nav ul li:first-child a {
+    border-left: none;
+}
+
+/*-------------------------------------------------------------*/
+
+/* 面包屑导航 */
+.breadcrumb {
+    background: linear-gradient(145deg, #fff9f9, #ffffff);
+    padding: 16px 0;
+    border-bottom: 1px solid #ffebeb;
+    box-shadow: 0 4px 12px rgba(199,0,10,0.06);
+    font-size: 0.95em;
+    margin-bottom: 30px;
+}
+
+.breadcrumb .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 20px;
+}
+
+.breadcrumb a {
+    color: #8A1A04;
+    text-decoration: none;
+    position: relative;
+    padding-right: 18px;
+    transition: all 0.3s ease;
+}
+
+.breadcrumb a::after {
+    
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #c7000a;
+    font-size: 1.2em;
+}
+
+.breadcrumb a:hover {
+    color: #c7000a;
+    transform: translateX(3px);
+}
+
+.breadcrumb span {
+    color: #666;
+    font-weight: 500;
+}
+/* ----------------------------------------------------- */
+
+/* ===== 增强版联系方式样式 ===== */
+.contact-section {
+    padding: 60px 20px;
+    background: linear-gradient(45deg, #fff9f9 20%, #ffffff 80%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 装饰性背景元素 */
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -30px;
+    width: 150px;
+    height: 150px;
+    background: rgba(138,26,4,0.05);
+    border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+    transform: rotate(45deg);
+}
+
+.contact-card {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(145deg, #ffffff, #fffafa);
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(138,26,4,0.08),
+                inset 0 0 0 1px rgba(255,255,255,0.5);
+    padding: 50px 40px;
+    position: relative;
+    backdrop-filter: blur(8px);
+}
+
+.section-title {
+    color: #8A1A04;
+    font-size: 2.4rem;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* 标题装饰线 */
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #8A1A04, transparent);
+    border-radius: 2px;
+}
+
+.fa-address-book {
+    font-size: 1.8em;
+    color: #8A1A04;
+    background: linear-gradient(45deg, #8A1A04, #d32f2f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.3s ease;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 25px;
+    padding: 25px;
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background: linear-gradient(145deg, #ffffff, #fff5f5);
+    border: 1px solid rgba(138,26,4,0.08);
+    position: relative;
+}
+
+.contact-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(138,26,4,0.1);
+    border-color: rgba(138,26,4,0.15);
+}
+
+/* 悬浮光效 */
+.contact-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 0%, rgba(138,26,4,0.05), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.contact-item:hover::after {
+    opacity: 1;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(138,26,4,0.1), transparent);
+    transition: all 0.3s ease;
+}
+
+.fas.icon {
+    font-size: 24px;
+    color: #8A1A04;
+    position: relative;
+}
+
+/* 图标悬浮动画 */
+.contact-item:hover .fas.icon {
+    color: #d32f2f;
+    transform: scale(1.1) rotate(8deg);
+    text-shadow: 0 2px 8px rgba(138,26,4,0.2);
+}
+
+.label {
+    color: #666;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    position: relative;
+    padding-left: 22px;
+}
+
+/* 标签装饰点 */
+.label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: #8A1A04;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.value {
+    color: #333;
+    font-weight: 600;
+    line-height: 1.5;
+    font-size: 1.1rem;
+    letter-spacing: 0.3px;
+}
+
+.postcode {
+    color: #8A1A04;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+
+/*------------------------------------------------------ 新增的CSS样式 */
+.home-footer {
+    background-color: #8A1A04;
+    position: relative;
+    overflow: hidden;
+    padding: 50px 20px;
+}
+
+.footer-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../image/footer.jpg); /* 替换为你的学校背景图路径 */
+    opacity: 0.12; /* 透明度调整 */
+    background-size: cover;
+    background-position: center 70%;
+    z-index: 1;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-top {
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    margin-bottom: 20px;
+}
+
+.footer-top p {
+    margin: 18px 0;  /* 增大间距 */
+    font-size: 16px; /* 原为14px */
+    color: rgba(255,255,255,0.9);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.footer-top a {
+    color: #ffd8a8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-top a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+
+
+ .site-header {
+  display: flex;
+  justify-content: flex-start; /* 改为左对齐 */
+  height: 100%;
+  padding-left: 5%; /* 添加左侧留白 */
+}
+
+/* 保持原有.logo-wrapper样式 */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+  margin-left: 20px; /* 增加左侧间距 */
+}
+
+.school-badge {
+  height: 80px; /* 根据实际需求调整 */
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  color: #c7000a;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+/* 添加悬浮动画 */
+img[alt="校徽"] {
+  transition: transform 0.3s ease;
+}
+img[alt="校徽"]:hover {
+  transform: scale(1.05) rotate(-5deg);
+}
+.title-container {
+  position: relative;
+  padding-left: 30px !important;
+}
+.title-container::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 15%;
+  height: 70%;
+  width: 4px;
+  background: linear-gradient(to bottom, #ffd700, #ffec80);
+  border-radius: 2px;
+}
+
+/* 校徽容器添加光影强化 */
+.logo-container {
+  position: relative;
+  padding: 8px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* 校徽颜色深度优化 */
+img.school-badge {
+  filter: 
+    brightness(0.9)    /* 降低亮度 */
+    contrast(1.8)      /* 增强对比 */
+    drop-shadow(0 2px 4px rgba(0,0,0,0.3)); /* 添加投影 */
+  transition: filter 0.3s ease;
+}
+
+
+/* 悬停增强效果 */
+img.school-badge:hover {
+  filter: 
+    brightness(1.1)
+    contrast(2)
+    drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+}
+:root {
+  --badge-light: #f0f0f0;
+  --badge-dark: #c0c0c0;
+}
+
+/* 联系方式容器 - 无边框版本 */
+.contact-container {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+    padding: 14px 25px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 8px;
+    backdrop-filter: blur(6px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 悬停动效 */
+.contact-container:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-50%) translateX(-4px);
+}
+
+/* 文字样式优化 */
+.contact-line {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+
+.tel-line {
+    font-size: 16px;
+    color: #ffecb3;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+/* 电话图标微调 */
+.tel-line::after {
+    filter: brightness(1.2);
+    opacity: 0.9;
+}
+
+
+/*电话样式 */
+.tel-line {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffec99;
+    position: relative;
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 6px;
+    background: rgba(199,0,10,0.15);
+    transition: background 0.3s ease;
+}
+
+/* 电话链接交互 */
+.tel-line a {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 电话图标微调 */
+.tel-line::after {
+    width: 18px;
+    height: 18px;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+}
+
+/* 优化 */
+/* 添加全局过渡属性 */
+.content-wrapper, 
+.special-column,
+.news-department,
+.home-footer {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* 入场动画激活状态 */
+.scroll-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.notice-list {
+    background: #f8f9fa;
+    border: 1px solid #f1f3f5;
+    box-shadow: 0 4px 20px rgba(199,0,10,0.05);
+}
+
+/* 列表项样式调整 */
+.notice-list li {
+    background: rgba(255,255,255,0.9);
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 15px 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(199,0,10,0.05);
+    border: 1px solid #ffe0e0;
+}
+
+/* 悬停效果增强 */
+.notice-list li:hover {
+    transform: translateX(8px);
+    box-shadow: 0 4px 15px rgba(199,0,10,0.12);
+    background: linear-gradient(145deg, #fff, #fff8f8);
+}
+
+/* 红点样式调整 */
+.notice-list li::before {
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: #ff4d4d;
+    box-shadow: 0 0 8px rgba(255,77,77,0.3);
+}
+
+/* 文字样式优化 */
+.notice-list .title {
+    color: #5a1a1a;
+    font-weight: 500;
+    position: relative;
+    padding-left: 15px;
+    
+}
+
+.notice-list .title::before {
+    content: "•";
+    color: #c7000a;
+    position: absolute;
+    left: 0;
+    top: 1px;
+}
+
+/* 日期样式调整 */
+.notice-list .date {
+    color: #c76363;
+    font-weight: 500;
+    position: relative;
+    padding-right: 22px;
+}
+
+.notice-list .date::after {
+    content: "▶";
+    color: #ff9999;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-45%);
+    font-size: 0.8em;
+}
+
+
+/* 大背景图 */
+/* 背景容器 */
+.page-background {
+  position: relative;
+  min-height: calc(100vh - 600px); /* 根据实际内容高度调整 */
+  background-color: #fff; /* 设置备用背景色 */
+}
+
+/* 透明背景层 */
+.page-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../image/Background3.jpg'); /* 替换为透明背景图路径 */
+  background-size: cover;
+  background-position: center 30%;
+  opacity: 0.15; /* 调整透明度 */
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 内容容器提升层级 */
+.content-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* 确保原有内容不受影响 */
+.content-wrapper, 
+.news-left, 
+.news-right, 
+.special-column {
+  background: none; /* 移除原有背景 */
+}
+
+
+/*友情链接*/
+.footer-links {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox 隐藏滚动条 */
+}
+
+.footer-links::-webkit-scrollbar {
+    display: none; /* Chrome Safari 隐藏滚动条 */
+}
+
+.footer-links h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffd8a8;
+    white-space: nowrap;
+    flex-shrink: 0;
+    width: auto;
+     margin-right: 30px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 42px;
+    flex-grow: 1;
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.footer-links ul::-webkit-scrollbar {
+    display: none;
+}
+
+.footer-links li {
+    font-size: 0.9rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+
+
