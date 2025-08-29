@@ -1,0 +1,51 @@
+/* 部门概况页面特定样式 */
+.main-content {
+    width: 1200px;
+    margin: 0 auto 30px;
+    background: #fff;
+    padding: 20px 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.article-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.5;
+    margin: 20px 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #BA2A17;
+}
+
+.article-content {
+    font-size: 16px;
+    line-height: 2;
+    color: #333;
+    margin-top: 30px;
+}
+
+.article-content p {
+    margin-bottom: 20px;
+    text-indent: 2em;
+}
+
+/* 当前位置样式 */
+.dqwz {
+    width: 1200px;
+    margin: 20px auto 0;
+    border-bottom: 1px solid #dedede;
+    background: url("../mod/mod-image/home.jpg") left center no-repeat;
+    padding: 15px 30px;
+    font-size: 14px;
+    color: #6c6c6c;
+}
+
+.dqwz a {
+    color: #6c6c6c;
+    padding: 0 10px;
+}
+
+.dqwz a:hover {
+    color: #ba2a17;
+}

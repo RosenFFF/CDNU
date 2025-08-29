@@ -1,0 +1,75 @@
+<div class="wrap">
+    <!-- 顶部 -->
+    <div class="Top">
+        <!-- Logo以及搜索 -->
+        <div class="Tops">
+           
+            <!-- 搜索及li -->
+            <div class="retrieval">
+                <!-- 搜索 -->
+                <script type="text/javascript">
+function _nl_ys_check(){
+    
+    var keyword = document.getElementById('showkeycode1029364').value;
+    if(keyword==null||keyword==""){
+        alert("请输入你要检索的内容！");
+        return false;
+    }
+    if(window.toFF==1)
+    {
+        document.getElementById("lucenenewssearchkey1029364").value = Simplized(keyword );
+    }else
+    {
+        document.getElementById("lucenenewssearchkey1029364").value = keyword;            
+    }
+    var  base64 = new Base64();
+    document.getElementById("lucenenewssearchkey1029364").value = base64.encode(document.getElementById("lucenenewssearchkey1029364").value);
+    new VsbFormFunc().disableAutoEnable(document.getElementById("showkeycode1029364"));
+    return true;
+} 
+</script>
+<form action="search.jsp?wbtreeid=1001" method="post" id="au0a" name="au0a" onsubmit="return _nl_ys_check()" style="display: inline">
+<input type="hidden" id="lucenenewssearchkey1029364" name="lucenenewssearchkey" value=""><input type="hidden" id="_lucenesearchtype1029364" name="_lucenesearchtype" value="1"><input type="hidden" id="searchScope1029364" name="searchScope" value="0">
+<div class="seek">
+<input name="showkeycode" class="texts" id="showkeycode1029364" type="text" name="" placeholder="请输入关键字">
+<input type="submit" class="ses" value="" align="absmiddle" style="cursor: hand">
+
+</div>
+</form>
+
+            </div>
+        </div>
+    </div>
+    <!-- 导航 -->
+   <div class="navwidth">
+<div class="nav">
+<ul>
+    <li><a href="../index.html" title="网站首页">网站首页</a>
+</li>
+<li><a href="../Introduce/Introduce.html" title="部门概括">部门概括</a>
+    <ul class="sub">
+        <li><a href="zzjg/xsgzldxz.htm" title="成都师范学院">成都师范学院</a></li>
+        <li><a href="zzjg/xsb.htm" title="成都师范学院">成都师范学院</a></li>
+        <li><a href="zzjg/xsz.htm" title="成都师范学院">成都师范学院</a></li>
+    </ul>
+</li>
+<li><a href="../content/More-page.html" title="部门新闻">部门新闻</a>
+</li>
+<li><a href="../content/More-page.html" title="通知公告">通知公告</a>
+</li>
+<li><a href="../content/More-page.html" title="政策法规">政策法规</a>
+</li>
+<li><a href="../content/More-page.html" title="资料下载">资料下载</a>
+</li>
+<li><a href="../Contact/Contact.html" title="联系方式">联系方式</a>
+</li>
+
+<div class="purge"></div>
+</ul>
+</div>
+</div>
+<!-- 图片 -->
+<div class="full-width-banner">
+<img src="../mod/mod-image/left-lunbo5.png" alt="Banner Image" class="banner-image">
+</div>
+</div>
